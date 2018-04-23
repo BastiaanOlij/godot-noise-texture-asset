@@ -40,7 +40,7 @@ void fragment() {
 [sub_resource type="ViewportTexture" id=3]
 
 resource_local_to_scene = true
-flags = 4
+flags = 0
 viewport_path = NodePath("WorleyViewport")
 
 [sub_resource type="ShaderMaterial" id=4]
@@ -54,7 +54,7 @@ _sections_unfolded = [ "Resource", "shader_param" ]
 [sub_resource type="ViewportTexture" id=5]
 
 resource_local_to_scene = true
-flags = 4
+flags = 0
 viewport_path = NodePath("WorleyViewport")
 
 [node name="Main" type="Spatial" index="0"]

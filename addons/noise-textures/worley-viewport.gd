@@ -18,15 +18,15 @@ func set_texture_size(new_size):
 	texture_size = new_size
 	
 	# resize viewport
-	size = Vector2(new_size.x, new_size.y * new_size.z);
+	size = Vector2(texture_size.x, texture_size.y * texture_size.z);
 	
 	# resize our texture
 	if color_rect:
-		color_rect.rect_size = Vector2(new_size.x, new_size.y * new_size.z);
+		color_rect.rect_size = Vector2(texture_size.x, texture_size.y * texture_size.z);
 	
 	# let our shader know...
 	if material:
-		material.set_shader_param("texture_rect", texture_size)
+		material.set_shader_param("max_z", texture_size.z)
 	
 	# and re-render our viewport
 	self.render_target_update_mode = Viewport.UPDATE_ONCE
